@@ -1,17 +1,25 @@
 import React, { useState } from "react";
 
 // Display component
-const Display = (props) => {
-  return <div>{props.counter}</div>;
-};
+// const Display = (props) => {
+//   return <div>{props.counter}</div>;
+// };
+
+// Display component refactored
+const Display = ({ counter }) => <div>{counter}</div>;
 
 // Button component
-const Button = (props) => {
-  return (
-    <div>
-      <button onClick={props.onClick}>{props.text}</button>
-    </div>
-  );
+// const Button = (props) => {
+//   return (
+//     <div>
+//       <button onClick={props.onClick}>{props.text}</button>
+//     </div>
+//   );
+// };
+
+// Button component refactored
+const Button = ({ onClick, text }) => {
+  return <button onClick={onClick}>{text}</button>;
 };
 
 const App = () => {
